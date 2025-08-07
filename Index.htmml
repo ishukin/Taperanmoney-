@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Lion Miner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="header">
+            <span id="username">Player</span>
+        </div>
+        
+        <div class="score-container">
+            <img src="https://i.postimg.cc/pT3Yj2tP/coin.png" alt="Coin" class="coin-icon">
+            <span id="score">0</span>
+        </div>
+
+        <div class="coin-button-container">
+            <button id="tap-button">
+                <!-- यह रहा आपका नया शेर वाला बटन -->
+                <img src="https://i.postimg.cc/L8y9g9T5/lion-head.png" alt="Tap Lion!">
+            </button>
+        </div>
+
+        <div class="energy-container">
+            ⚡ <span id="energy">1000</span> / <span id="max-energy">1000</span>
+            <div class="energy-bar-background">
+                <div id="energy-bar" class="energy-bar-foreground"></div>
+            </div>
+        </div>
+
+        <div class="actions-container">
+            <button id="ads-button" class="action-btn">Get Energy ⚡</button>
+            <button id="withdraw-button" class="action-btn">Withdraw</button>
+        </div>
+    </div>
+
+    <!-- Withdrawal Modal/Popup -->
+    <div id="withdraw-modal" class="modal-overlay" style="display: none;">
+        <div class="modal-content">
+            <h2>Withdraw Coins</h2>
+            <p>Min withdrawal: 100,000 coins</p>
+            <input type="text" id="wallet-address" placeholder="Enter your TON/USDT Wallet Address">
+            <button id="submit-withdrawal">Submit Request</button>
+            <button id="close-modal">Close</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
